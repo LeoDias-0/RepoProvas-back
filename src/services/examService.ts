@@ -3,9 +3,7 @@ import { getRepository } from 'typeorm'
 import Exam from '../entities/Exam'
 
 export async function getExams() {
-	const exams = await getRepository(Exam).find({
-		select: ['id', 'category']
-	})
+	const exams = await getRepository(Exam).find({})
 
 	return exams
 }
